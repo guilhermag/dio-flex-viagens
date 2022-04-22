@@ -21,7 +21,6 @@ div img {
 
 .flex-container {
   display: flex;
-  max-width: 992px;
   margin: auto;
   width: 100%;
   align-items: center;
@@ -54,15 +53,19 @@ header .list-items {
 }
 
 .apresentacao {
-  height: 100vh;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .apresentacao .texto-apresentacao {
   min-height: 200px;
 }
 
+.texto-apresentacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .texto-apresentacao h1 {
   color: #122A57;
   font-size: 48px;
@@ -170,7 +173,6 @@ header .list-items {
 
 .planos {
   flex-direction: column;
-  min-height: 100vh;
   padding-top: 50px;
 }
 .planos h2 {
@@ -251,6 +253,7 @@ footer .footer {
 @media(max-width: 992px) {
   .flex-container {
     flex-direction: column;
+    padding: 0px;
   }
 
   header h1 {
@@ -259,11 +262,19 @@ footer .footer {
 
   .apresentacao {
     flex-direction: column-reverse;
+    align-items: center;
   }
 
   .apresentacao .texto-apresentacao {
     width: 100%;
   }
+
+  .texto-apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 
   .quem-somos {
     flex-direction: column-reverse;
